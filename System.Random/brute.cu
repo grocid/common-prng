@@ -6,6 +6,13 @@
 
 #include "cuda_runtime.h"
 
+// This finds a seed such that the following relations hold:
+//
+// Random r = new Random(seed);
+// TARGET == r.Next(MIN, MAX)
+//
+// Note that w.h.p. there are multiple such seeds.
+
 #define MIN     1000000
 #define MAX     1000000000
 #define TARGET  638101650
